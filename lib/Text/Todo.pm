@@ -478,7 +478,7 @@ here is the RCS Id instead, you'll have to look up $VERSION.
     
     my $todo = Text::Todo->new('todo/todo.txt');
 
-    foreach my $e (sort { lc($_->text) cmp lc($e->text)} $todo->list) {
+    foreach my $e (sort { lc($a->text) cmp lc($b->text)} $todo->list) {
         print $e->text, "\n";
     }
 
